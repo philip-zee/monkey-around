@@ -10,7 +10,7 @@ from shipping_package import ShippingPackage
 
 class TestShippingPackageIsBulky:
     """Test cases for the is_bulky method."""
-    
+
     @pytest.mark.parametrize("width,height,length,mass,expected", [
         (151, 10, 10, 5, True),        # Bulky by width
         (10, 151, 10, 5, True),        # Bulky by height
@@ -28,7 +28,7 @@ class TestShippingPackageIsBulky:
 
 class TestShippingPackageIsHeavy:
     """Test cases for the is_heavy method."""
-    
+
     @pytest.mark.parametrize("width,height,length,mass,expected", [
         (10, 10, 10, 21, True),        # Mass exceeds 20
         (10, 10, 10, 50, True),        # Mass significantly exceeds
@@ -44,7 +44,7 @@ class TestShippingPackageIsHeavy:
 
 class TestShippingPackageSort:
     """Test cases for the sort method."""
-    
+
     @pytest.mark.parametrize("width,height,length,mass,expected", [
         (151, 10, 10, 21, "REJECT"),   # Bulky and heavy
         (100, 100, 101, 21, "REJECT"), # Volume exceeds and heavy
