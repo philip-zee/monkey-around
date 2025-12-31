@@ -1,4 +1,7 @@
 .DS_Store
 .coverage
 .vscode
+.pytest_cache
+.databricks
 __pycache__
+.python-version
